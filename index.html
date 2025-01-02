@@ -65,13 +65,6 @@
                                 <span class="title name-main cover_style" data-anim="zoom-out"
                                     style="padding-bottom: 15px; color: red;">Dinesh Raj & Nathiya</span>
                                 <div class="elements-widget" data-anim="zoom-out">
-                                    <div style="display: flex; justify-content: center; align-items: center;">
-                                        <div style="margin-top: 10px; background-color: #f3f0df; border-radius: 10px;
-                                            padding: 15px; width: 200px; margin-bottom: 20px;">
-                                            <p>Guest Name</p>
-                                            <h3 id="namaTamu"></h3>
-                                        </div>
-                                    </div>
                                     <button class="btn btn-custom color-secondary" id="btn-envelope">
                                         <strong>Open Invitation <i class="fas fa-envelope-open-text"></i></strong>
                                     </button>
@@ -84,7 +77,7 @@
 
         </section>
 
-        <div class="moveable_section_wrapper">
+        <div class="moveable_section_wrapper z-[1000]">
             <!-- Header section -->
             <section class="header-section">
                 <div class="music-player playing">
@@ -93,7 +86,7 @@
                     </div>
                     <audio id="my-audio">
                         <source src="/songs.mp3" type="audio/mpeg">
-                        type="audio/mpeg">
+
                     </audio>
                 </div>
                 <div class="elements-wrapper-absolute" data-anim="zoom-out-bg-wrap" data-anim-duration="9500ms">
@@ -367,7 +360,7 @@
                                     <h3 class="bride_style notranslate" data-anim="zoom-out">Nathiya</h3>
                                     <div class="couple-parent" data-anim="fade-down">
                                         <div class="couple-parent-description">
-                                            <p>B.Tech in Biotechnology</p>
+                                            <p>BSC in Biotechnology</p>
                                         </div>
 
 
@@ -821,6 +814,50 @@
     </div>
 
 
+
+    <!-- Modal Add -->
+    <div class="modal fade show-maps" id="kado_even" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <button type="button" class="btn-modal" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fas fa-xmark"></i>
+                    </button>
+                    <div class="modal-actions" style="margin-bottom: 40px;">
+                        <h2>Kado Pernikahan</h2>
+                    </div>
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <div style="display: block; justify-content: center; width: 300px;">
+                            <div
+                                style="display: flex; justify-content: start; align-items: center; margin-bottom: 5px; width: 100%;">
+                                <p style="margin-right: 10px;">Nama Bank:</p>
+                                <p style="background-color: white; border: solid; border-width: 2px; border-radius: 10px;
+                        padding: 5px; padding-inline: 15px;">Bank BCA</p>
+                            </div>
+                            <div
+                                style="display: flex; justify-content: start; align-items: center; margin-bottom: 5px; width: 100%;">
+                                <p style="margin-right: 10px;">Nama Rekening:</p>
+                                <p style="background-color: white; border: solid; border-width: 2px; border-radius: 10px;
+                        padding: 5px; padding-inline: 15px;">Sigit Wibowo</p>
+                            </div>
+                            <div
+                                style="display: flex; justify-content: start; align-items: center; margin-bottom: 5px; width: 100%;">
+                                <p style="margin-right: 10px;">No. Rekening:</p>
+                                <p style="background-color: white; border: solid; border-width: 2px; border-radius: 10px;
+                        padding: 5px; padding-inline: 15px;" id="no_rekening">12345678</p>
+                            </div>
+                            <div
+                                style="display: flex; justify-content: center; align-items: center; margin-bottom: 5px; width: 100%;">
+                                <button type="buttton" class="btn btn-custom color-secondary m-auto w-100 mb-3"
+                                    id="salin_btn">Salin No. Rekening</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
