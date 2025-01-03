@@ -31,7 +31,6 @@
         line-height: 0.8;
     }
 
-    /* Default styling for large screens */
     .name-main .main-name {
         font-size: 200px;
         color: red;
@@ -47,7 +46,6 @@
         color: red;
     }
 
-    /* Responsive styling for medium screens (tablets) */
     @media (max-width: 768px) {
 
         .name-main .main-name,
@@ -60,7 +58,6 @@
         }
     }
 
-    /* Responsive styling for small screens (mobile) */
     @media (max-width: 480px) {
 
         .name-main .main-name,
@@ -77,7 +74,6 @@
 <body>
     </div>
     <div class="main-app">
-        <!-- Loader -->
         <div class="loader-wrapper"></div>
         <script>
             document.onreadystatechange = () => {
@@ -91,7 +87,6 @@
         </script>
         <div class="progress"></div>
 
-        <!-- Envelope Section -->
         <section class="cover-section">
             <div class="elements-wrapper-absolute">
                 <div class="background-element">
@@ -132,7 +127,6 @@
         </section>
 
         <div class="moveable_section_wrapper z-[1000]">
-            <!-- Header section -->
             <section class="header-section">
                 <div class="music-player playing">
                     <div class="play-button">
@@ -288,7 +282,6 @@
                 </div>
             </section>
 
-            <!-- Couple section -->
             <section class="couple-section moveable-section" data-id="1">
                 <div class="container position-relative">
                     <div class="row justify-content-evenly">
@@ -439,7 +432,6 @@
                 </div>
             </section>
 
-            <!-- Story section -->
             <section class="story-section moveable-section" data-id="2">
                 <div class="elements-wrapper-absolute">
                     <div class="background-element">
@@ -479,7 +471,6 @@
             </section>
 
             <section class="moveable-section" data-id="4">
-                <!-- Vanue & Event section -->
                 <section class="venue-section">
                     <div class="image-wrapper">
                         <div class="orn-1">
@@ -614,7 +605,6 @@
             </section>
 
 
-            <!-- Gallery Section -->
             <section class="gallery-section moveable-section" data-id="3" data-anim="zoom-out">
                 <div class="container">
                     <div class="row justify-content-center">
@@ -630,7 +620,6 @@
                 </div>
             </section>
 
-            <!-- Apology section -->
             <section class="apology-section moveable-section" data-id="7">
                 <div class="elements-wrapper-absolute">
                     <div class="background-element">
@@ -659,7 +648,6 @@
                 </div>
             </section>
 
-            <!-- Thanks Section -->
             <section class="thank-section moveable-section" data-id="9">
                 <div class="orn-1">
                     <img src="https://media.viding.co/dmlkaW5nIGNvIGltYWdlIHByb3h5IGJ5IGZseS5pbw/rs:auto:0:0:1/g:no/aHR0cHM6Ly92aWRpbmcuY28vaW52aXRhdGlvbi90aGVtZV85MC9hc3NldHMvaW1hZ2VzL2NvdXBsZS1wb2hvbi0xLnBuZw.webp"
@@ -785,7 +773,7 @@
                 }
 
                 .footer-text a:hover {
-                    color: #d9ff00;
+                    color: #a3bf05;
                 }
 
                 .footer-divider {
@@ -810,7 +798,6 @@
 
 
 
-    <!-- Modal Add -->
     <div class="modal fade show-maps" id="kado_even" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -928,273 +915,15 @@
         integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
-    <style>
-        input.error,
-        select.error {
-            margin-bottom: 0px !important;
-        }
 
-        label.error {
-            display: block;
-            width: 100%;
-            margin-bottom: 0.5rem;
-        }
 
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-    </style>
-    <script>
-        $("#formGift").validate({
-            submitHandler: function (form) {
-                form.submit();
-            }
-        });
-    </script>
 
     <script src="https://viding.co/invitation/theme_90/assets/js/jquery.magnific-popup.min.js"></script>
     <script src="countdown.js"></script>
     <script
         src="https://viding.co/invitation/theme_90/assets/js/app.js?v=9c9de41489c3ec798d41d877d78b800052f9ea6b"></script>
 
-    <script>
-        if (document.querySelector("#gallery-default")) {
-            const gallery = new Splide("#gallery-default", {
-                pagination: false,
-            });
-
-            const thumbnails = new Splide("#thumbnail-gallery-default", {
-                pagination: false,
-                arrows: false,
-                focus: "center",
-                gap: 2.5,
-                perPage: 6,
-                isNavigation: true,
-                breakpoints: {
-                    576: {
-                        perPage: 4
-                    }
-                }
-            });
-
-            gallery.sync(thumbnails)
-            gallery.mount();
-            thumbnails.mount()
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const btnOpenAngpao = document.querySelector("#openAngpao");
-            const formAngpao = document.querySelector("#formGift");
-
-            if (btnOpenAngpao) {
-                btnOpenAngpao.addEventListener('click', () => {
-                    formAngpao.classList.remove("d-none");
-                    btnOpenAngpao.classList.add("d-none");
-                    ScrollTrigger.refresh();
-                });
-            }
-        });
-
-        $("#anonymous_angpao").click(function () {
-            if ($(this).is(':checked')) {
-                $('.angpao-field-hideable').prop('required', false);
-                $('.angpao-field-hideable').hide('500');
-            } else {
-                $('.angpao-field-hideable').prop('required', true);
-                $('.angpao-field-hideable').show('500');
-            }
-
-            setTimeout(function () {
-                ScrollTrigger.refresh();
-            }, 1000);
-        });
-
-        $(document).ready(function () {
-
-            // fonts
-            $('head').append('<link rel="stylesheet" href="https://viding.co/invitation/theme_11/css/font.css?v=d6e7e1f1734d49fc0162a5d7e5ebfea369dcbabe">');
-            $('head').append('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />');
-
-
-            $('head').append('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.8/dist/css/splide.min.css" integrity="sha256-sB1O2oXn5yaSW1T/92q2mGU86IDhZ0j1Ya8eSv+6QfM=" crossorigin="anonymous">');
-            $('head').append('<link rel="stylesheet" href="https://viding.co/invitation/theme_90/assets/css/magnific-popup.css">');
-            $('head').append('<link rel="stylesheet" href="https://unpkg.com/@icon/icofont/icofont.css">');
-            $('head').append('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.css" integrity="sha512-DIW4FkYTOxjCqRt7oS9BFO+nVOwDL4bzukDyDtMO7crjUZhwpyrWBFroq+IqRe6VnJkTpRAS6nhDvf0w+wHmxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />');
-
-            $.ajaxSetup({
-                headers: {
-                    // 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    "X-Requested-With": 'XMLHttpRequest'
-                }
-            });
-
-            // font family
-            let couple_name_on_main_font_family = "";
-            let couple_name_on_cover_font_family = "";
-            let couple_name_on_couple_font_family = "";
-            let parents_name_on_couple_font_family = "";
-
-            // font size
-            let couple_name_on_main_font_size = "";
-            let couple_name_on_cover_font_size = "";
-            let couple_name_on_couple_font_size = "";
-            let parents_name_on_couple_font_size = "";
-
-            // change font family and font size
-            $('.main_style').css({
-                'font-family': couple_name_on_main_font_family,
-                'font-size': couple_name_on_main_font_size + 'px'
-            });
-
-            $('.cover_style').css({
-                'font-family': couple_name_on_cover_font_family,
-                'font-size': couple_name_on_cover_font_size + 'px'
-            });
-
-            $('.bride_style').css({
-                'font-family': couple_name_on_couple_font_family,
-                'font-size': couple_name_on_couple_font_size + 'px'
-            });
-
-            $('.couple-parent-description p').css({
-                'margin-bottom': '0px'
-            });
-
-            $('.couple-parent-name p').css({
-                'font-family': parents_name_on_couple_font_family,
-                'font-size': parents_name_on_couple_font_size + 'px',
-                'margin-bottom': '0px'
-            });
-
-            reload_guestbook_data();
-        });
-
-        var section_order = [1, 2, 3, 4, 6, 5, 7, 8, 9];
-        var section_wrapper = $('.moveable_section_wrapper');
-
-        section_wrapper.append(
-            $.map(section_order, function (elm) {
-                return $(".moveable-section[data-id='" + elm + "']");
-            })
-        );
-
-        $("#tambahdata").validate({
-            submitHandler: function (form) {
-                var actionType = $('#tombolsimpan').val();
-                $('#tombolsimpan').prop('disabled', true);
-                $('#tombolsimpan').html('Sending..');
-                $.ajax({
-                    data: $('#tambahdata').serialize(),
-                    url: "https://viding.co/generateVenueQr",
-                    type: "POST",
-                    dataType: 'json',
-                    success: function (data) {
-                        $('#tombolsimpan').html('Simpan');
-
-                        if (data.data.send_rsvp_qrcode == 0 || data.data.status == 0) {
-                            if (`en` == 'en') {
-                                $('#cardRSVP').html("<p class='mb-5'>Thank you for confirming your attendance.</p>");
-                            } else {
-                                $('#cardRSVP').html("<p class='mb-5'>Terima kasih telah mengkonfirmasi kehadiran Anda.</p>");
-                            }
-                        } else {
-                            if (data.data.whatsapp_rsvp == 1) {
-                                if (`en` == 'en') {
-                                    $('#cardRSVP').html("<p class='m-4 text-center'>Thank you for confirming your attendance. We have sent a QR Code to your WhatsApp number. Please save the QR Code for later scanning at the event venue</p>");
-                                } else {
-                                    $('#cardRSVP').html("<p class='m-4 text-center'>Terima kasih telah mengkonfirmasi kehadiran Anda. Kami telah mengirimkan QR Code ke nomor WhatsApp Anda. Silahkan simpan QR Code tersebut untuk nantinya discan pada saat di venue acara</p>");
-                                }
-                            } else {
-                                if (`en` == 'en') {
-                                    $('#cardRSVP').html("<p class='m-4 text-center'>Thank you for confirming your attendance. We have sent a QR Code to your email address. Please save the QR Code for later scanning at the event venue</p>");
-                                } else {
-                                    $('#cardRSVP').html("<p class='m-4 text-center'>Terima kasih telah mengkonfirmasi kehadiran Anda. Kami telah mengirimkan QR Code ke alamat email Anda. Silahkan simpan QR Code tersebut untuk nantinya discan pada saat di venue acara</p>");
-                                }
-                            }
-                        }
-
-                        ScrollTrigger.refresh();
-
-                        iziToast.success({
-                            title: 'Sukses',
-                            message: 'Terimakasih atas konfirmasi anda!',
-                            position: 'bottomRight'
-                        });
-                    },
-                    error: function (data) {
-                        $('#tombolsimpan').prop('disabled', false);
-                        $('#tombolsimpan').html('Simpan');
-                        iziToast.error({
-                            title: ' Gagal Terkirim',
-                            message: 'Mohon coba lagi',
-                            position: 'bottomRight'
-                        });
-                    }
-                });
-            }
-        });
-
-        function reload_guestbook_data() {
-            if ($('#wishes_wrapper').length) {
-                $('#wishes_wrapper').html('<p class="mb-4"><b>Sedang Memuat Komentar..</b></p>');
-                var reload_url = $('#wishes_wrapper').data('url');
-                $('#wishes_wrapper').load(reload_url);
-            }
-        }
-
-        $("#guestbook_form").validate({
-            submitHandler: function (form) {
-                var actionType = $('#tombolsimpan').val();
-                $('#guestbook_submit_btn').prop('disabled', true);
-                $('#guestbook_submit_btn').html('Sending..');
-
-                $.ajax({
-                    data: $('#guestbook_form').serialize(),
-                    url: "https://viding.co/bookstore",
-                    type: "POST",
-                    dataType: 'json',
-                    success: function (data) {
-                        if (`en` == 'en') {
-                            $('.guestbook_form_wrapper').html("<p class='text-center'>Thank you, you have left a comment</p>");
-                        } else {
-                            $('.guestbook_form_wrapper').html("<p class='text-center'>Terima Kasih, Anda telah memberikan komentar</p>");
-                        }
-
-                        $('#guestbook_submit_btn').prop('disabled', false);
-                        $('#guestbook_submit_btn').html('Send');
-
-                        reload_guestbook_data();
-                        ScrollTrigger.refresh();
-
-                        iziToast.success({
-                            title: 'Berhasil',
-                            message: 'Pesan anda telah ditambahkan. Terimakasih!',
-                            position: 'bottomRight'
-                        });
-                    },
-                    error: function (data) {
-                        $('#guestbook_submit_btn').prop('disabled', false);
-                        $('#guestbook_submit_btn').html('Send');
-
-                        iziToast.error({
-                            title: 'Gagal',
-                            message: 'Pesan anda gagal ditambahkan. Silahkan mencoba kembali beberapa saat!',
-                            position: 'bottomRight'
-                        });
-                    }
-                });
-            }
-        });
-    </script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
-    <script defer
-        src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854"
-        integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg=="
-        data-cf-beacon='{"rayId":"8123e5abe9575cd6","token":"9788b2a8af4d4335bde0fab3174b2eed","version":"2023.8.0","si":100}'
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
