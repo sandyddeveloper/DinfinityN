@@ -1,22 +1,26 @@
 const Countdown = (date) => {
-  console.log(date);
-  const ct = new Date(date).getTime();
+  console.log(`Countdown set to: ${date}`);
+  const targetTime = new Date(date).getTime();
 
-  const x = setInterval(() => {
-    let now = new Date().getTime();
-    let distance = ct - now;
+  const interval = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = targetTime - now;
 
-    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    let hours = Math.floor(
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
       (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
     );
-    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     if (distance <= 0) {
-      clearInterval(x);
+      clearInterval(interval);
       document.querySelector(".countdown-message").innerText =
         "Countdown finished!";
+      document.querySelector(".days .angka").innerText = "0";
+      document.querySelector(".hours .angka").innerText = "0";
+      document.querySelector(".minutes .angka").innerText = "0";
+      document.querySelector(".seconds .angka").innerText = "0";
     } else {
       document.querySelector(".days .angka").innerText = days;
       document.querySelector(".hours .angka").innerText = hours;
@@ -26,8 +30,8 @@ const Countdown = (date) => {
   }, 1000);
 };
 
-// Start countdown for March 10, 2025, 10:30 AM
-Countdown("March 10, 2025 10:30:00");
+// Initialize the countdown
+Countdown("2025-03-10T10:30:00");
 
 document.getElementById("salin_btn").addEventListener("click", function () {
   var noRekening = document.getElementById("no_rekening");
