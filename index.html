@@ -24,7 +24,36 @@
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
+<style>
+    .name-main {
+        font-weight: 900;
+        text-align: center;
+    }
 
+    /* Default styling for large screens */
+    .name-main {
+        font-size: 200px;
+        color: red;
+    }
+
+    .name-main span {
+        color: orange;
+    }
+
+    /* Responsive styling for medium screens (tablets) */
+    @media (max-width: 768px) {
+        .name-main {
+            font-size: 120px;
+        }
+    }
+
+    /* Responsive styling for small screens (mobile) */
+    @media (max-width: 480px) {
+        .name-main {
+            font-size: 80px;
+        }
+    }
+</style>
 
 <body>
     </div>
@@ -211,9 +240,9 @@
                                     <div class="header-title">
                                         <div class="header-title-content">
                                             <h1 class="name-main mb-3 main_style notranslate" data-anim="zoom-in"
-                                                data-anim-delay="1000"
-                                                style="color: red; font-weight:900; font-size: 200px;">Dinesh
-                                                Raj <span style="color: orange;">&</span> Nathiya</h1>
+                                                data-anim-delay="1000">
+                                                Dinesh Raj <span>&</span> Nathiya
+                                            </h1>
                                             <div data-anim="fade-down" data-anim-delay="1000">
                                                 <p><span style="font-size: 14pt;"></span></p>
                                             </div>

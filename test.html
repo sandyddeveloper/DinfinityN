@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Heading</title>
+    <style>
+        .name-main {
+            font-weight: 900;
+            text-align: center;
+        }
+
+        /* Default styling for large screens */
+        .name-main {
+            font-size: 200px;
+            color: red;
+        }
+
+        .name-main span {
+            color: orange;
+        }
+
+        /* Responsive styling for medium screens (tablets) */
+        @media (max-width: 768px) {
+            .name-main {
+                font-size: 120px;
+            }
+        }
+
+        /* Responsive styling for small screens (mobile) */
+        @media (max-width: 480px) {
+            .name-main {
+                font-size: 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="name-main mb-3 main_style notranslate" data-anim="zoom-in" data-anim-delay="1000">
+        Dinesh Raj <span>&</span> Nathiya
+    </h1>
+</body>
+
+</html>
